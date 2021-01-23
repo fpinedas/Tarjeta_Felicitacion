@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "fillAfter" a "true" implica que los objetos afectados por las animaciones
+    permanecerán en el estado final de la animación. Es decir, no volverán a su estado
+    inicial -->
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:fillAfter="true">
+
+    <!-- Desplazamiento lateral, desde la derecha hacía la izquierda.
+        En el eje "Y" no hay ningún tipo de desplazamiento. Por eso, los parámetros
+        "fromYDelta" y "toYDelta" tienen valor 0.
+    -->
+    <translate
+        android:fromYDelta="0"
+        android:toYDelta="0"
+        android:fromXDelta="1000"
+        android:toXDelta="0"
+        android:duration="3000"
+        />
+
+    <!-- Encogimiento lateral, desde la derecha hacía la izquierda.
+        En el eje "Y" no hay ningún tipo de encogimiento. Por eso, los parámetros
+        "fromYScale" y "toYScale" tienen valor 1 (tamaño original).
+        El parámetro "startOffset" indica que la animación de escala no comenzará
+        simultáneamente con la de desplazamiento, sino que comenzará con el retraso
+        indicado en este parámetro (en milisegundos).
+    -->
+    <scale
+        android:startOffset="3500"
+        android:pivotX="0"
+        android:pivotY="50%"
+        android:fromYScale="1"
+        android:toYScale="1"
+        android:fromXScale="1"
+        android:toXScale="0"
+        android:duration="2000"
+        />
+
+</set>
